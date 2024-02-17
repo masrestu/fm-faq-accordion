@@ -79,23 +79,22 @@ details:last-of-type {
 
 details summary {
 	cursor: pointer;
-	display: grid;
-	grid-template-columns: 1fr auto;
-	column-gap: 2rem;
+	display: flex;
+	gap: 2rem;
 	align-items: center;
-}
-
-details summary h2 {
+	justify-content: space-between;
 	font-size: 1rem;
 	font-weight: 700;
 	color: var(--custom-dark-purple);
 }
 
-details summary:hover h2 {
+details summary:hover {
 	color: var(--custom-purple);
 }
 
-details summary .dtl-btn {
+details summary::after {
+	content: '';
+	display: block;
 	width: 2rem;
 	height: 2rem;
 	background-image: url('../assets/images/icon-plus.svg');
@@ -104,7 +103,7 @@ details summary .dtl-btn {
 	background-size: contain;
 }
 
-details[open] summary .dtl-btn {
+details[open] summary::after {
 	background-image: url('../assets/images/icon-minus.svg');
 }
 
