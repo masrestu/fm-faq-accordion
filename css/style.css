@@ -119,6 +119,7 @@ details p {
 	body {
 		background-image: url('../assets/images/background-pattern-desktop.svg');
 		padding: 10.375rem 0;
+		background-repeat: repeat-x;
 	}
 
 	.container {
